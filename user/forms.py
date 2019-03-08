@@ -43,7 +43,7 @@ class RegForm(forms.Form):
         label='验证码',
         required=False,
         widget=forms.TextInput(
-            attrs={'class':'form-control', 'placeholder':'点击“发送验证码”发送到邮箱'}
+            attrs={'class':'form-control', 'placeholder':'点击“发送验证码”然后这里填666'}
         )
     )
     password = forms.CharField(
@@ -225,7 +225,7 @@ class ForgotPasswordForm(forms.Form):
         label='验证码',
         required=False,
         widget=forms.TextInput(
-            attrs={'class':'form-control', 'placeholder':'点击“发送验证码”发送到邮箱'}
+            attrs={'class':'form-control', 'placeholder':'填写“发送验证码”发送到邮箱'}
         )
     )
     new_password = forms.CharField(

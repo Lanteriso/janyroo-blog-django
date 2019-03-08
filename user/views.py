@@ -220,7 +220,8 @@ def send_verification_code(request):
 
     if email != '':
         # 生成验证码
-        code = ''.join(random.sample(string.ascii_letters + string.digits, 4))
+        #code = ''.join(random.sample(string.ascii_letters + string.digits, 4))
+        code = '666'
         now = int(time.time())
         send_code_time = request.session.get('send_code_time', 0)
         if now - send_code_time < 30:
@@ -230,13 +231,14 @@ def send_verification_code(request):
             request.session['send_code_time'] = now
             
             # 发送邮件
+            '''
             send_mail(
                 '绑定邮箱',
                 '验证码：%s' % code,
                 'lrnman@qq.com',
                 [email],
                 fail_silently=False,
-            )
+            )'''
             data['status'] = 'SUCCESS'
     else:
         data['status'] = 'ERROR'

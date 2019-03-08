@@ -67,6 +67,7 @@
             }
 
             // 发送验证码
+            $("#tip").text('验证码是666');
             $.ajax({
                 url: "{% url 'send_verification_code' %}",
                 type: "GET",
