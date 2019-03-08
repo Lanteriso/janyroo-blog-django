@@ -22,7 +22,7 @@ SECRET_KEY = '9qgh-%y9tr2*6cxvnzf8(u8a!&&&ea_-@-a18gooqunwozt)c$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [u'jany.pythonanywhere.com','*']
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -54,3 +54,7 @@ EMAIL_HOST_PASSWORD = 'umuxopsdpcgnbggf'#muzwogwhwqmrcaif'  # 授权码
 EMAIL_SUBJECT_PREFIX = '[JANYROO BLOG] '
 EMAIL_USE_TLS = True  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)
 
+MEDIA_ROOT = u'/home/jany/janyroo-blog-django/media'
+MEDIA_URL = '/media/'
+STATIC_ROOT = u'/home/jany/janyroo-blog-django/static'
+STATIC_URL = '/static/'
