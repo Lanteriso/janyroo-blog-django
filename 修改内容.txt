@@ -1,0 +1,41 @@
+1 mysite setting base.py
+# QQ登录配置
+QQ_APP_ID = '101523209'
+#QQ_APP_KEY = os.environ['QQ_APP_KEY']
+QQ_REDIRECT_URL = 'http://zqyhdm.com/user/login_by_qq'
+QQ_STATE = 'zqyhdm'
+
+------------------
+2 mysite setting development.py和production.py
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+------------------
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'lrnman@qq.com'
+EMAIL_HOST_PASSWORD = 'umuxopsdpcgnbggf'#muzwogwhwqmrcaif'aeudvpccmuzodchh'  # 授权码
+EMAIL_SUBJECT_PREFIX = '[JANYROO BLOG] '
+EMAIL_USE_TLS = True  # 与SMTP服务器通信时，是否启动TLS链接(安全链接)
+
+------------------
+ADMINS = (
+    ('admin', 'lrnman@qq.com'),
+)
+
+------------------
+3 python manage.py migrate更新模型文件
+
+------------------
+4 python manage.py createsuperuser来个超级用户
+
+------------------
+5 修改user\views.py
+def send_verification_code(request):的发件邮箱
+
+------------------
